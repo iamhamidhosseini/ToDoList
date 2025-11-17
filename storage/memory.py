@@ -26,12 +26,18 @@ class MemoryStorage:
     
     def delete_project(self, project_id: str) -> bool:
         if project_id in self.projects:
-            del self.projects[project_id]
+            # Delete all tasks associated with this project
             task_ids = self.project_tasks.get(project_id, [])
             for task_id in task_ids:
                 if task_id in self.tasks:
                     del self.tasks[task_id]
-            del self.project_tasks[project_id]
+            
+            # Clean up project tasks mapping
+            if project_id in self.project_tasks:
+                del self.project_tasks[project_id]
+            
+            # Delete project
+            del self.projects[project_id]
             return True
         return False
     
@@ -52,7 +58,7 @@ class MemoryStorage:
         tasks = [self.tasks[task_id] for task_id in task_ids if task_id in self.tasks]
         return sorted(tasks, key=lambda t: t.created_at)
     
-    def update_task(self, task_id: str, title: str, description: str, status: str) -> bool:
+    def update_task(self, task_id: str, title: str, description: str, status) -> bool:
         if task_id in self.tasks:
             self.tasks[task_id].title = title
             self.tasks[task_id].description = description
@@ -61,8 +67,10 @@ class MemoryStorage:
         return False
     
     def delete_task(self, task_id: str) -> bool:
+        """Delete a task"""
         if task_id in self.tasks:
             task = self.tasks[task_id]
+            # Remove task from project tasks mapping
             if task.project_id in self.project_tasks:
                 self.project_tasks[task.project_id] = [
                     tid for tid in self.project_tasks[task.project_id] 
@@ -72,7 +80,7 @@ class MemoryStorage:
             return True
         return False
     
-    def get_task_by_title(self, project_id: str, task_title: str):
+    def get_task_by_title(self, project_id: str, task_title: str) -> Optional[Task]:
         tasks = self.get_project_tasks(project_id)
         for task in tasks:
             if task.title == task_title:

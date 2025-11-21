@@ -1,4 +1,4 @@
-TodoList Application
+# TodoList Application
 
 A robust Python-based TodoList application built with SQLAlchemy ORM, following clean architecture principles with repository pattern and dependency injection.
 Architecture & Design Patterns

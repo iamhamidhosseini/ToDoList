@@ -456,3 +456,8 @@ Production Deployment
 
     CI/CD pipeline setup
 
+<img width="1920" height="1080" alt="Screenshot From 2025-11-21 13-14-54" src="https://github.com/user-attachments/assets/b2be0ade-6cbd-47ca-9292-76720aee8ce6" />
+
+<img width="1920" height="1080" alt="Screenshot From 2025-11-21 13-14-43" src="https://github.com/user-attachments/assets/67fac123-508a-476a-932f-4e5d7360f089" />
+
+

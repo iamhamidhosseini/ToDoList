@@ -25,3 +25,15 @@ class DatabaseSession:
 
 # Global database session instance
 db_session = DatabaseSession()
+
+# Dependency for FastAPI
+def get_db():
+    """
+    FastAPI dependency that provides a database session.
+    Usage in endpoint: db: Session = Depends(get_db)
+    """
+    db = db_session.get_session()
+    try:
+        yield db
+    finally:
+        db.close()

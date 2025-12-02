@@ -842,60 +842,8 @@ text
 Project Structure (Phase 3 Final)
 text
 
-todolist/
-├── app/
-│   ├── api/                    # Web API Layer (Phase 3)
-│   │   ├── controllers/        # FastAPI endpoint controllers
-│   │   │   ├── projects_controller.py
-│   │   │   ├── tasks_controller.py
-│   │   │   └── __init__.py
-│   │   ├── schemas/           # Pydantic models for request/response
-│   │   │   ├── requests/
-│   │   │   │   ├── project_request.py
-│   │   │   │   └── task_request.py
-│   │   │   ├── responses/
-│   │   │   │   ├── project_response.py
-│   │   │   │   └── task_response.py
-│   │   │   └── __init__.py
-│   │   └── routers.py         # API route definitions
-│   ├── exceptions/            # Custom exception classes
-│   ├── models/               # SQLAlchemy ORM models (Phase 2)
-│   │   ├── project.py
-│   │   ├── task.py
-│   │   └── __init__.py
-│   ├── repositories/         # Repository pattern (Phase 2)
-│   │   ├── project_repository.py
-│   │   ├── task_repository.py
-│   │   └── __init__.py
-│   ├── services/            # Business logic layer
-│   │   ├── project_service.py
-│   │   ├── task_service.py
-│   │   └── __init__.py
-│   ├── commands/            # CLI commands (Phase 1 & 2 - Deprecated)
-│   │   ├── autoclose_overdue.py
-│   │   ├── scheduler.py
-│   │   └── __init__.py
-│   ├── cli/                 # CLI interface (Phase 1 & 2 - Deprecated)
-│   │   ├── console.py
-│   │   └── __init__.py
-│   └── db/                  # Database configuration
-│       ├── base.py
-│       ├── session.py
-│       └── __init__.py
-├── alembic/                 # Database migrations (Phase 2)
-│   ├── versions/
-│   ├── env.py
-│   └── alembic.ini
-├── tests/                   # Test suites
-│   ├── unit/
-│   ├── integration/
-│   └── __init__.py
-├── main.py                  # Application entry point
-├── config.py               # Configuration management
-├── docker-compose.yml      # PostgreSQL setup (Phase 2)
-├── pyproject.toml          # Poetry configuration
-├── README.md               # Project documentation
-└── .env                    # Environment variables
+<img width="433" height="771" alt="Screenshot From 2025-12-02 18-25-10" src="https://github.com/user-attachments/assets/9e5a369b-1e40-4f96-97a7-9b960f93880e" />
+
 
 🔧 Configuration Management
 Environment Variables (.env)

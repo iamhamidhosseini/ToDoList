@@ -803,41 +803,8 @@ app.add_middleware(TrustedHostMiddleware, allowed_hosts=["example.com"])
 Multi-Layer Architecture Diagram
 text
 
-┌─────────────────────────────────────────────────────────────┐
-│                    Presentation Layer                        │
-├─────────────────────────────────────────────────────────────┤
-│  Phase 1: CLI        │  Phase 3: API Controllers            │
-│  • Click commands    │  • FastAPI endpoints                 │
-│  • Interactive mode  │  • Request validation                │
-│  • User input/output │  • Response formatting               │
-└──────────────────────┴──────────────────────────────────────┘
-                                  ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    Business Logic Layer                      │
-├─────────────────────────────────────────────────────────────┤
-│  Service Layer                                              │
-│  • ProjectService    │  • TaskService                       │
-│  • Validation logic  │  • Business rules                    │
-│  • Transaction mgmt  │  • Scheduled tasks                   │
-└─────────────────────────────────────────────────────────────┘
-                                  ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    Data Access Layer                         │
-├─────────────────────────────────────────────────────────────┤
-│  Repository Layer                                           │
-│  • ProjectRepository │  • TaskRepository                    │
-│  • CRUD operations   │  • Complex queries                   │
-│  • Data mapping      │  • Connection management             │
-└──────────────────────┴──────────────────────────────────────┘
-                                  ↓
-┌─────────────────────────────────────────────────────────────┐
-│                    Persistence Layer                         │
-├─────────────────────────────────────────────────────────────┤
-│  Phase 1: In-Memory │  Phase 2/3: PostgreSQL/SQLite         │
-│  • Python lists     │  • SQLAlchemy ORM                     │
-│  • Dictionaries     │  • Alembic migrations                 │
-│  • No persistence   │  • Docker containerization            │
-└──────────────────────┴──────────────────────────────────────┘
+<img width="538" height="714" alt="Screenshot From 2025-12-02 18-26-56" src="https://github.com/user-attachments/assets/e11e1bce-7a3a-4c3c-b8b9-b4bb8114a62a" />
+
 
 Project Structure (Phase 3 Final)
 text

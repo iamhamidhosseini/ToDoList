@@ -845,3 +845,11 @@ AUTO_CLOSE_INTERVAL_MINUTES=15
 CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
 API_KEY=your_secret_api_key_here
 JWT_SECRET=your_jwt_secret_key_here
+
+## Postman Testing :
+<img width="1283" height="845" alt="Screenshot From 2025-12-05 10-58-51" src="https://github.com/user-attachments/assets/1dac6514-5f00-43f6-b783-9f110ba46f1e" />
+<img width="1287" height="850" alt="Screenshot From 2025-12-05 10-58-37" src="https://github.com/user-attachments/assets/b14699a9-3746-4601-9a4e-a8b21b31c8b9" />
+<img width="1287" height="850" alt="Screenshot From 2025-12-05 10-58-33" src="https://github.com/user-attachments/assets/be8bfc67-7c4f-4650-864b-d958a3c22ba0" />
+<img width="1287" height="850" alt="Screenshot From 2025-12-05 10-58-26" src="https://github.com/user-attachments/assets/716f9211-7aab-44d3-9da4-a51a743d5b80" />
+<img width="1283" height="845" alt="Screenshot From 2025-12-05 10-58-56" src="https://github.com/user-attachments/assets/1f9a5b09-6e00-4eda-b82e-094604167f45" />
+
